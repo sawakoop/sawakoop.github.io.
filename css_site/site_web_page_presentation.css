@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Platypi&display=swap');
+
+@font-face {
+    font-family: 'The Seasons';
+    src: url('TheSeasons.woff2') format('woff2');
+    /* Ajoutez d'autres formats de police si nécessaire */
+}
+
+
+body {
+    background-image: url('fond.gif');
+    background-size: auto;
+    background-position: center;
+    height: 100vh; /* Hauteur égale à 100% de la hauteur de la fenêtre */
+    margin: 0; /* Supprimer la marge par défaut */
+    padding: 0; /* Supprimer le rembourrage par défaut */
+}
+
+.navbar{
+	background-color : #F6F2EF!important;
+	border: 1px solid grey;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.navbar-nav .nav-item {
+    margin-right: 30px; /* Espacement entre les éléments de la navbar */
+}
+
+.navbar-nav .nav-link {
+    font-family: 'Forum', sans-serif; /* Appliquer la police "Forum" au texte de la navbar */
+    text-decoration: none; /* Supprimer le soulignement par défaut */
+	font-size : 16px;
+}
+
+.navbar-nav .nav-link:hover {
+    font-weight: bold; /* Changer en gras au survol */
+}
+
+.dropdown-menu .dropdown-item:hover {
+    font-weight: bold; /* Changer en gras au survol */
+}
+
+
+
+.navbar-nav .nav-link {
+    display: flex; /* Utiliser flexbox */
+    align-items: center; /* Aligner les éléments verticalement */
+}
+
+.navbar-nav .nav-link .download {
+    width: 20px; /* Ajustez la largeur selon vos besoins */
+    height: auto; /* Permet de conserver le ratio hauteur/largeur */
+    margin-left: 5px; /* Ajustez la marge à gauche selon vos besoins */
+}
+
+
+
+
+.dr_fr{
+    width: 15%; /* Définissez la taille souhaitée */
+    height: auto; /* Cela permet de conserver les proportions originales de l'image */
+    margin-right: 5px;
+	margin-bottom: 4px;
+}
+
+.dr_uk{
+    width: 15%; /* Définissez la taille souhaitée */
+    height: auto; /* Cela permet de conserver les proportions originales de l'image */
+    margin-right: 5px;
+	margin-bottom: 4px;
+}
+
+.dropdown-menu .dropdown-item {
+	background-color: transparent !important; /* Annuler la couleur de fond */
+	color: #433633;
+    font-family: 'Forum', sans-serif; /* Appliquer la police "Forum" au texte du menu déroulant */
+}
+
+.dropdown-menu .dropdown-item:hover {
+    font-weight: bold; /* Changer en gras au survol */
+}
+
+
+.titre {
+	text-align: center;
+	margin-top: 4%;
+}
+
+
+.titre h1 {
+	color : #433633;
+    display: inline-block; /* Permet d'ajouter le trait en ligne avec le titre */
+    position: relative; /* Définir la position relative pour positionner le trait */
+	font-family: 'Platypi';
+}
+
+.titre h1::after {
+    content: ''; /* Obligatoire pour les pseudo-éléments */
+    position: absolute; /* Position absolue pour le positionnement précis */
+    bottom: -120%; /* Position en dessous du texte */
+    left: 50%; /* Position au centre de l'élément parent */
+    transform: translateX(-50%); /* Déplacer le trait horizontalement pour le centrer */
+    width: 1000px; /* Largeur du trait */
+    height: 0; /* Hauteur du trait, réglée sur 0 pour un trait sans espace vertical */
+    border-bottom: 1px solid #433633;
+}
+
+
+
+
+
+@keyframes moveLeftToRight {
+  0% { margin-left: 25%; }
+  50% { margin-left: 31%; }
+  100% { margin-left: 25%; }
+  animation-timing-function: ease; /* Ajouter une fonction d'accélération (ease) */
+}
+
+@keyframes moveRightToLeft {
+  0% { margin-right: 25%; }
+  50% { margin-right: 31%; }
+  100% { margin-right: 25%; }
+  animation-timing-function: ease; /* Ajouter une fonction d'accélération (ease) */
+}
+
+
+.presentation1 {
+  width: 8%;
+  height: auto;
+  margin-top: -5%;
+  float: left; /* Placer l'élément à gauche */
+  animation: moveLeftToRight 5s infinite alternate; /* Animation de gauche à droite */
+}
+
+.presentation2 {
+  width: 8%;
+  height: auto;
+  margin-top: -5%;
+  float: right; /* Placer l'élément à droite */
+  transform: scaleX(-1); /* Inversion horizontale de l'image */
+  animation: moveRightToLeft 5s infinite alternate; /* Animation de droite à gauche */
+}
+
+
+
+
+
+
+/* Ajout de styles pour la div parente */
+.container {
+    text-align: center; /* Centre les enfants horizontalement */
+    margin-top: 10%; /* Espacement par rapport à la barre de menu */
+    display: flex; /* Utilisation de Flexbox */
+    justify-content: center; /* Centre les éléments horizontalement */
+}
+
+.block1 {
+    width: 25%; /* Largeur des blocs */
+    height: 250px;
+    padding: 20px;
+    background-color: #D3B094; /* Couleur de fond pour block1 */
+    border: 1px solid #433633; /* Bordure */
+    border-radius: 15px;
+    margin: 0 75px; /* Marge entre les blocs */
+    color: white;
+    font-family: 'The Seasons', sans-serif;
+    display: flex; /* Utilisation de Flexbox pour aligner le contenu */
+    flex-direction: column; /* Alignement vertical des éléments */
+    align-items: center; /* Alignement horizontal */
+    text-align: center; /* Centre le texte horizontalement */
+    overflow: hidden; /* Empêche le contenu de déborder */
+    display: flex;
+    justify-content: center;
+}
+
+.block1 h5,
+.block1 p {
+    margin: 0;
+    align-self: center; /* Centre le contenu verticalement */
+}
+
+
+.block2 {
+    width: 25%; /* Largeur des blocs */
+    height: 250px;
+    padding: 20px;
+    background-color: #687A61; /* Couleur de fond pour block1 */
+    border: 1px solid #433633; /* Bordure */
+    border-radius: 15px;
+    margin: 0 75px; /* Marge entre les blocs */
+    color: white;
+    font-family: 'The Seasons', sans-serif;
+    display: flex; /* Utilisation de Flexbox pour aligner le contenu */
+    flex-direction: column; /* Alignement vertical des éléments */
+    align-items: center; /* Alignement horizontal */
+    text-align: center; /* Centre le texte horizontalement */
+    overflow: hidden; /* Empêche le contenu de déborder */
+    display: flex;
+    justify-content: center;
+}
+
+.block2 h5,
+.block2 p {
+    margin: 0;
+    align-self: center; /* Centre le contenu verticalement */
+}
+
+.block3 {
+    width: 25%; /* Largeur des blocs */
+    height: 250px;
+    padding: 20px;
+    background-color: #D3B094; /* Couleur de fond pour block1 */
+    border: 1px solid #433633; /* Bordure */
+    border-radius: 15px;
+    margin: 0 75px; /* Marge entre les blocs */
+    color: white;
+    font-family: 'The Seasons', sans-serif;
+    display: flex; /* Utilisation de Flexbox pour aligner le contenu */
+    flex-direction: column; /* Alignement vertical des éléments */
+    align-items: center; /* Alignement horizontal */
+    text-align: center; /* Centre le texte horizontalement */
+    overflow: hidden; /* Empêche le contenu de déborder */
+    display: flex;
+    justify-content: center;
+}
+
+.block3 h5,
+.block3 p {
+    margin: 0;
+    align-self: center; /* Centre le contenu verticalement */
+}
+
+
+.custom-modal-lg {
+    max-width: 60%;
+}
+
+
+.modal-content {
+	background-color: #F6F2EF!important;
+	color: #433633!important;
+}
+
+
+.btn-primary1:hover,
+.btn-primary1:hover h1 {
+    background-color: #DFC5A6!important; /* Nouvelle couleur de fond au survol et au clic */
+    border: 1px solid #433633!important; /* Bordure */
+    color: #fff!important; /* Couleur du texte */
+}
+
+.btn-primary2:hover,
+.btn-primary2:hover h1 {
+    background-color: #859C7A!important; /* Nouvelle couleur de fond au survol et au clic */
+    border: 1px solid #433633!important; /* Bordure */
+    color: #fff!important; /* Couleur du texte */
+}
+
+.btn-primary3:hover,
+.btn-primary3:hover h1 {
+    background-color: #DFC5A6!important; /* Nouvelle couleur de fond au survol et au clic */
+    border: 1px solid #433633!important; /* Bordure */
+    color: #fff!important; /* Couleur du texte */
+}
+
+
+
+.fs-5,
+.modal-body {
+	color : #433633;
+	font-family: 'The Seasons', sans-serif;
+}
+
+
+.btn-close {
+    background-color: transparent!important; /* Couleur de fond transparente */
+    border: none!important; /* Pas de bordure */
+    box-shadow: none!important; /* Pas d'ombre */
+}
+
+
+.custom-margin {
+    margin: 50px 200px 50px 200px;
+}
+
+
+.fleur1 {
+    width: 110px; /* Définissez la largeur */
+	margin: -530px 0 0 385px;
+	position: relative; /* Ajoutez une position relative pour pouvoir contrôler le z-index */
+}
+
+.fleur2 {
+    width: 110px; /* Définissez la largeur */
+	margin: -530px 0 0 925px;
+	position: relative; /* Ajoutez une position relative pour pouvoir contrôler le z-index */
+}
+
+
+.horizontal-line {
+    width: 1000px; /* Longueur du trait */
+    height: 2px; /* Épaisseur du trait */
+    border-bottom: 1px solid #433633;
+    margin: -150px auto 0; /* Centre le trait horizontalement et le déplace vers le haut */
+}
+
+
+.diagramme {
+    width: 2.5%; /* Définissez la largeur souhaitée */
+    position: fixed; /* Utilisez 'fixed' pour que l'élément reste en place même lorsque vous faites défiler la page */
+    bottom: 25px; /* Positionne l'élément à 5px du bas de l'écran */
+    right: 25px; /* Positionne l'élément à 5px de la droite de l'écran */
+    margin-bottom: 0; /* Assurez-vous qu'il n'y a pas de marge en bas */
+    margin-right: 0; /* Assurez-vous qu'il n'y a pas de marge à droite */
+}
+
+
+
+
+/* Styles pour les téléphones */
+@media only screen and (max-width: 600px) {
+
+    /* Centrer le titre */
+    .titre {
+        margin-top: 40px;
+    }
+	
+	.titre h1 {
+		color : #433633;
+		display: inline-block; /* Permet d'ajouter le trait en ligne avec le titre */
+		position: relative; /* Définir la position relative pour positionner le trait */
+		font-family: 'Platypi';
+	}
+
+	.titre h1::after {
+		content: ''; /* Obligatoire pour les pseudo-éléments */
+		position: absolute; /* Position absolue pour le positionnement précis */
+		bottom: -120%; /* Position en dessous du texte */
+		left: 50%; /* Position au centre de l'élément parent */
+		transform: translateX(-50%); /* Déplacer le trait horizontalement pour le centrer */
+		width: 500px; /* Largeur du trait */
+		height: 0; /* Hauteur du trait, réglée sur 0 pour un trait sans espace vertical */
+		border-bottom: 1px solid #433633;
+	}
+
+
+	@keyframes moveLeftToRight {
+	  0% { margin-left: 10%; }
+	  50% { margin-left: 12%; }
+	  100% { margin-left: 10%; }
+	  animation-timing-function: ease; /* Ajouter une fonction d'accélération (ease) */
+	}
+
+	@keyframes moveRightToLeft {
+	  0% { margin-right: 10%; }
+	  50% { margin-right: 12%; }
+	  100% { margin-right: 10%; }
+	  animation-timing-function: ease; /* Ajouter une fonction d'accélération (ease) */
+	}
+
+
+	.presentation1 {
+	  width: 15%;
+	  height: auto;
+	  margin-top: -10%;
+	  float: left; /* Placer l'élément à gauche */
+	  animation: moveLeftToRight 5s infinite alternate; /* Animation de gauche à droite */
+	}
+
+	.presentation2 {
+	  width: 15%;
+	  height: auto;
+	  margin-top: -10%;
+	  float: right; /* Placer l'élément à droite */
+	  transform: scaleX(-1); /* Inversion horizontale de l'image */
+	  animation: moveRightToLeft 5s infinite alternate; /* Animation de droite à gauche */
+	}
+	
+	
+	
+    /* Présentation */
+	.fleur1,
+	.fleur2,
+	.horizontal-line{
+        display: none;
+    }
+
+    /* Styles des blocs */
+    .container {
+		text-align: center; /* Centre les enfants horizontalement */
+		margin-top: 15%; /* Espacement par rapport à la barre de menu */
+		display: block; /* Afficher les blocs comme des éléments de bloc */
+	}
+
+	.block1 {
+		width: 80%; /* Largeur des blocs */
+		height: 150px;
+		padding: 20px;
+		background-color: #D3B094; /* Couleur de fond pour block1 */
+		border: 1px solid #433633; /* Bordure */
+		border-radius: 15px;
+		color: white;
+		font-family: 'The Seasons', sans-serif;
+		margin: 30px auto; /* Marge autour des blocs */
+		box-sizing: border-box; /* Inclure le padding et la bordure dans la hauteur et la largeur */
+	}
+
+	.block1 h5,
+	.block1 p {
+		margin: 0;
+		align-self: center; /* Centre le contenu verticalement */
+	}
+
+
+	.block2 {
+		width: 80%; /* Largeur des blocs */
+		height: 150px;
+		padding: 20px;
+		background-color: #687A61; /* Couleur de fond pour block1 */
+		border: 1px solid #433633; /* Bordure */
+		color: white;
+		font-family: 'The Seasons', sans-serif;
+		margin: 30px auto; /* Marge autour des blocs */
+		box-sizing: border-box; /* Inclure le padding et la bordure dans la hauteur et la largeur */
+	}
+
+	.block2 h5,
+	.block2 p {
+		margin: 0;
+		align-self: center; /* Centre le contenu verticalement */
+	}
+
+	.block3 {
+		width: 80%; /* Largeur des blocs */
+		height: 150px;
+		padding: 20px;
+		background-color: #D3B094; /* Couleur de fond pour block1 */
+		border: 1px solid #433633; /* Bordure */
+		color: white;
+		font-family: 'The Seasons', sans-serif;
+		margin: 30px auto; /* Marge autour des blocs */
+		box-sizing: border-box; /* Inclure le padding et la bordure dans la hauteur et la largeur */
+	}
+
+	.block3 h5,
+	.block3 p {
+		margin: 0;
+		align-self: center; /* Centre le contenu verticalement */
+	}
+	
+	.modal-dialog {
+        max-width: 90% !important; /* Ajustez la largeur selon vos besoins */
+    }
+	
+	.diagramme {
+		width: 5%; /* Définissez la largeur souhaitée */
+		position: fixed; /* Utilisez 'fixed' pour que l'élément reste en place même lorsque vous faites défiler la page */
+		bottom: 25px; /* Positionne l'élément à 5px du bas de l'écran */
+		right: 25px; /* Positionne l'élément à 5px de la droite de l'écran */
+		margin-bottom: 0; /* Assurez-vous qu'il n'y a pas de marge en bas */
+		margin-right: 0; /* Assurez-vous qu'il n'y a pas de marge à droite */
+	}
+	
+
+}

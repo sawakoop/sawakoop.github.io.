@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title> PORTFOLIO - BAPTISTE TIVRIER </title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css_bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css_site/site_web_page_presentation.css">
+	</head>
+	<body>
+	
+	<!-- ****************************** DEBUT BARRE DU MENU ****************************** -->
+		
+		<header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="site_web_page_accueil_en.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+							<a class="nav-link  active" aria-current="page" href="#"> <b>Introduction</b> </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="site_web_page_parcours_en.html">Studies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="site_web_page_competences_en.html">Expertises</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="site_web_page_proju_en.html">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="site_web_page_contact_en.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="CV_TIVRIER_BAPTISTE_en.pdf" download="CV_TIVRIER_BAPTISTE_fr.pdf">
+                                CV <img src="image\download.png" alt="Download" class ="download"/>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Languages
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#" onclick="changeLanguage('fr')">
+										<img src="image\dr_fr.jpg" alt="Français" class="dr_fr"/>
+										French
+									</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#" onclick="changeLanguage('en')">
+										<img src="image\dr_uk.jpg" alt="Anglais" class="dr_uk"/>
+										English
+									</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        function changeLanguage(language) {
+            var currentPage = window.location.href;
+            var linksToModify = [
+                'site_web_page_accueil',
+                'site_web_page_presentation',
+                'site_web_page_parcours',
+                'site_web_page_proju',
+                'site_web_page_contact',
+                'CV_TIVRIER_BAPTISTE'
+            ];
+
+            linksToModify.forEach(function(linkName) {
+                var link = document.querySelector('a[href="' + linkName + '_en.html"]');
+                if (link) {
+                    if (language === 'fr') {
+                        link.setAttribute('href', linkName + '_fr.html');
+                    } else if (language === 'en') {
+                        link.setAttribute('href', linkName + '_en.html');
+                    }
+                }
+            });
+			
+			linksToModify.forEach(function(linkName) {
+                var link = document.querySelector('a[href="' + linkName + '_en.pdf"]');
+                if (link) {
+                    if (language === 'fr') {
+                        link.setAttribute('href', linkName + '_fr.html');
+                    } else if (language === 'en') {
+                        link.setAttribute('href', linkName + '_en.html');
+                    }
+                }
+            });
+			
+            // Modifier le lien de la page actuelle
+            if (language === 'fr') {
+                window.location.href = currentPage.replace('_en', '_fr');
+            } else if (language === 'en') {
+                window.location.href = currentPage.replace('_fr', '_en');
+            }
+        }
+    </script>
+		
+	<!-- ****************************** FIN BARRE DU MENU ****************************** -->
+
+		
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+		
+		<div class="titre">
+			<h1> INTRODUCTION </h1>
+		</div>
+		
+		
+		<img src="image\presentation.png" alt="Presentation" class="presentation1"/>
+		
+		<img src="image\presentation.png" alt="Presentation" class="presentation2"/>
+		
+		
+		<div class="container">
+			<button type="button" class="block1 btn btn-primary1" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+				<h5> Block N°1 </h5>
+				<p> - </p>
+				<p> <i> "Interests" </i> </p>
+			</button>
+			
+			<!-- Modal 3 -->
+			<div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel3" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable custom-modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h1 class="modal-title fs-5" id="staticBackdropLabel"> <b> Centres d'intérêt </b> </h1>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body" style="text-align: justify; margin: 25px 50px;">
+							<!-- Contenu du modal -->
+							<p> <b> Music : </b> </p>
+									<p> Music holds a central place in my interests. It's a passion that drives me every day.
+									Whether at home, on the go, or at work, I am constantly accompanied by my favorite music.
+									My musical taste is rather eclectic, ranging from metal to piano, among various other genres.
+									I find the instrumental aspect of a song crucial, as it can evoke a real enthusiasm in me for a track.
+									Although I'm not always attentive to the lyrics, I take the time to appreciate them when some particularly touch me.
+									Currently, my musical preferences lean towards Kpop, Pop, and Rap, with artists such as Stray Kids, IVE, aespa, Post Malone, and Damso.
+									Among the tracks that have caught my attention recently are "MANIAC" by VIVIZ, "Straight Line" by Kep1er, and "The Killa (I Belong to You)" by TOMORROW X TOGETHER.
+									I highly recommend checking out the EP "IVE SWITCH" by IVE, released this April 29th, as well as the album "5-STAR" by Stray Kids, released last June.
+									These works are truly worth checking out. </p>
+							<p> </br> </p>
+							<p> <b> Dance : </b> </p>
+									<p> Dance represents one of my strongest interests, a passion rooted in my life since my early years.
+									It's an intimate relationship that persists over time, where every step brings me a sense of well-being, like a recharge of energy.
+									Dance allows me to escape, relax, and deeply connect with music, offering me a welcome respite from the daily whirlwind.
+									Although I've never taken formal lessons, I consider myself proficient in this art. I don't have a particular dance style, enjoying both energetic movements and calmer ones alike.
+									Recently, I've been engaged in learning choreographies to Kpop music, an experience that is both fun and stimulating.
+									Among my favorite choreographies are "I AM" by IVE and "Teddy Bear" by STAYC, which I've mastered perfectly.
+									Currently, I'm taking on the challenge of learning the choreography for "MAGO" by GFRIEND, a demanding yet captivating task.
+									For me, dance and music form an inseparable duo, a harmonious combination that enriches my daily life. </p>
+							<p> </br> </p>
+							<p> <b> Volleyball : </b> </p>
+									<p> Volleyball holds a special place in my interests, being my sport of choice.
+									While I may not master all the technical subtleties of this sport, every time I step onto the court, I feel an intense satisfaction in playing.
+									Volleyball offers a unique combination of fun and camaraderie with teammates, while also providing a dose of competition, focus, and support during matches.
+									This blend of elements allows me to stay both focused and relaxed. I discovered my passion for volleyball during my high school years, particularly in my senior year,
+									during post-class sessions with friends and during physical education classes. Later, during my college years, I decided to take the plunge by joining a volleyball club,
+									drawn to the atmosphere and team spirit of this sport. I am currently a member of my club for the second consecutive year,
+									although I am currently taking a several-week break for health reasons. </p>
+							<p> </br> </p>
+							<p> <b> Cooking : </b> </p>
+									<p> Cooking is one of my hobbies, although not as deep-seated as my other interests, it is still important to me.
+									I've been indulging in it for several years now. Initially focused on preparing savory dishes, I am now delving into the realm of pastry.
+									I enjoy constantly experimenting with new recipes while seeking to perfect those I master best.
+									Among my creations, my signature dish consists of fresh gnocchi accompanied by a delicious sauce made with cream, veal stock, mushrooms, and Parmesan cheese.
+									It's a comforting recipe, perfect for autumn and winter evenings. Recently, I had the opportunity to discover a Cinnamon Rolls recipe on Instagram,
+									and I must say it was one of the best pastries I've ever made. With the arrival of summer, I plan to explore new recipes and focus more on sweet creations. </p>
+							<p> </br> </p>
+							<p> <b> Others : </b> </p>
+									<p> I have several other passions deeply rooted within me. Although I'm not a avid reader, I am increasingly finding pleasure in immersing myself in reading.
+									Currently, I am mainly focusing on manga, but I'm also trying to explore other literary genres, such as science fiction, and I intend to start the Dune saga.
+									Regarding manga, my favorites include One Piece, Mob Psycho, and Death Note. Besides reading, design is another passion of mine.
+									I am very meticulous and greatly appreciate the visual aspect of things. For example, I take pride in working on the design of this portfolio,
+									seeking to give it a distinctive graphical touch. Like many people my age, I also enjoy video games. Even though I play them less these days,
+									I still find pleasure in relaxing while playing games such as Overwatch 2, where I can focus, have fun, and strengthen teamwork, or The Legend Of Zelda: Tears of The Kingdom,
+									which offers an immersive gaming experience where I can explore the world at my own pace. Lastly, hiking is one of my favorite activities.
+									I particularly enjoy quiet, beautiful places close to nature, which allow me to recharge. Recently, I had the opportunity to go to Cantal with three friends,
+									and this experience was one of the most refreshing and memorable of my life. I discovered charming places and I hope to have the opportunity to return someday. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<button type="button" class="block2 btn btn-primary2" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+				<h5> Block N°2 </h5>
+				<p> - </p>
+				<p> <i> "About me" </i> </p>
+			</button>
+			
+			<!-- Modal 3 -->
+			<div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel3" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable custom-modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h1 class="modal-title fs-5" id="staticBackdropLabel"> <b> About me </b> </h1>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body" style="text-align: justify; margin: 25px 50px;">
+							<!-- Contenu du modal -->
+							<p> <b> Who am I ? </b> </p>
+							<p> My name is Baptiste Tivrier. I am currently a second-year student in the University of Technology Bachelor's degree program in Data Science at the IUT Paris Rives de Seine
+							specializing in the "Visualization and Design of Decision-Making Tools Specialization" track. Passionate about computer science, mathematics, and data analysis,
+							I chose this program for its ability to combine these fields. I consider this discipline as a fertile ground offering many opportunities for learning and professional development.
+							During my academic journey, I had the opportunity to engage in a rewarding work-study experience. Since October 2023,
+							I have been employed at the General Directorate of Administration and Public Service in Paris.
+							This opportunity allows me to apply my theoretical knowledge to real-world situations while contributing to solving concrete problems with business data.
+							<p> <br> </p>
+							<p> <b> Later ? </b> </p>
+							In the future, after completing my University Bachelor's degree, my goal is to continue my studies by enrolling in a Master's program in Applied Mathematics or Statistics.
+							This decision stems from my desire to continue exploring and deepening my knowledge in these areas, with the aim of pursuing a fulfilling and stimulating professional career. </p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-success" onclick="window.location.href='https://www.linkedin.com/in/baptiste-tivrier/'"> <i> Linkedin </i> </button>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<button type="button" class="block3 btn btn-primary3" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
+				<h5> Block N°3 </h5>
+				<p> - </p>
+				<p> <i> "Getting to know me better" </i> </p>
+			</button>
+			
+			<!-- Modal 3 -->
+			<div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel3" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable custom-modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h1 class="modal-title fs-5" id="staticBackdropLabel"> <b> Getting to know me better </b> </h1>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div id="carouselExampleDark3" class="carousel carousel-dark slide">
+						<div class="carousel-indicators">
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+						</div>
+							<div class="carousel-inner" style="margin: 30px 0px 100px 0px;">
+							<div class="carousel-item active" onclick="location.href='https://open.spotify.com/intl-fr/album/7z61DsZtWO2S4nC5xd0b9p';">
+								<p style="margin-bottom: 25px;"> <b> My current go-to album : <br> </b> <i> "IVE SWITCH" - IVE </i> </p>
+								<img src="image/iveswitch.png" class="d-block mx-auto border border-dark" alt="..." height="200px;" width="200px;">
+							</div>
+							<div class="carousel-item" onclick="location.href='https://open.spotify.com/intl-fr/album/69xF8jTd0c4Zoo7DT3Rwrn';">
+								<p style="margin-bottom: 25px;"> <b> My favorite album : <br> </b> <i> "MY WORLD" - aespa </i> </p>
+								<img src="image/myworld.png" class="d-block mx-auto border border-dark" alt="..." height="200px;" width="200px;">
+							</div>
+							<div class="carousel-item" onclick="location.href='https://open.spotify.com/intl-fr/track/70t7Q6AYG6ZgTYmJWcnkUM?si=0786826839fb437d';">
+								<p style="margin-bottom: 25px;"> <b> My favorite song : <br> </b> <i> "I AM" - IVE </i> </p>
+								<img src="image/iveive.png" class="d-block mx-auto border border-dark" alt="..." height="200px;" width="200px;">
+							</div>
+							<div class="carousel-item" onclick="location.href='https://en.wikipedia.org/wiki/Harry_Potter_and_the_Half-Blood_Prince_(film)';">
+								<p style="margin-bottom: 25px;"> <b> My favorite movie : <br> </b> <i> "Harry Potter et le Prince de Sang-Mêlé" - J.K. Rowling </i> </p>
+								<img src="image/hp6.png" class="d-block mx-auto border border-dark" alt="..." height="300px;" width="225px;">
+							</div>
+							<div class="carousel-item" onclick="location.href='https://en.wikipedia.org/wiki/Incendies_(play)';">
+								<p style="margin-bottom: 25px;"> <b> Ma favorite play : <br> </b> <i> "Incendies" - Wajdi Mouawad </i> </p>
+								<img src="image/incendies.png" class="d-block mx-auto border border-dark" alt="..." height="300px;" width="200px;">
+							</div>
+							<div class="carousel-item" onclick="location.href='https://en.wikipedia.org/wiki/Les_Fleurs_du_mal';">
+								<p style="margin-bottom: 25px;"> <b> My favorite volume of poetry : <br> </b> <i> "Les Fleurs du Mal" - Charles Baudelaire </i> </p>
+								<img src="image/fleursdumal.png" class="d-block mx-auto border border-dark" alt="..." height="300px;" width="200px;">
+							</div>
+							<div class="carousel-item" onclick="location.href='https://en.wikipedia.org/wiki/Mob_Psycho_100';">
+								<p style="margin-bottom: 25px;"> <b> My favorite manga : <br> </b> <i> "Mob Psycho 100" - ONE </i> </p>
+								<img src="image/mob.png" class="d-block mx-auto border border-dark" alt="..." height="300px;" width="210px;">
+							</div>
+							<div class="carousel-item" onclick="location.href='https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Breath_of_the_Wild';">
+								<p style="margin-bottom: 25px;"> <b> My favorite video game : <br> </b> <i> "The Legend of Zelda: Breath of the Wild" - Nintendo </i> </p>
+								<img src="image/zelda.png" class="d-block mx-auto border border-dark" alt="..." height="300px;" width="225px;">
+							</div>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark3" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark3" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<img src="image/fleur1.png" alt="Fleur" class="fleur1">
+		
+		<img src="image/fleur2.png" alt="Fleur" class="fleur2">
+		
+		<div class="horizontal-line">
+		</div>
+		
+		<div class="diagramme">
+			<img src="image/diagramme_presentation.png" alt="Diagramme" class="diagramme">
+		</div>
+
+
+		
+		
+	</body>
+</html>

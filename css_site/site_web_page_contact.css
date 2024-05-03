@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Platypi&display=swap');
+
+@font-face {
+    font-family: 'The Seasons';
+    src: url('TheSeasons.woff2') format('woff2');
+    /* Ajoutez d'autres formats de police si nécessaire */
+}
+
+body {
+    background-image: url('fond.gif');
+    background-size: auto;
+    background-position: center;
+    height: 100vh; /* Hauteur égale à 100% de la hauteur de la fenêtre */
+    margin: 0; /* Supprimer la marge par défaut */
+    padding: 0; /* Supprimer le rembourrage par défaut */
+}
+
+.navbar{
+	background-color : #F6F2EF!important;
+	border: 1px solid grey;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 30px; /* Espacement entre les éléments de la navbar */
+}
+
+.navbar-nav .nav-link {
+    font-family: 'Forum', sans-serif; /* Appliquer la police "Forum" au texte de la navbar */
+    text-decoration: none; /* Supprimer le soulignement par défaut */
+	font-size : 16px;
+}
+
+.navbar-nav .nav-link:hover {
+    font-weight: bold; /* Changer en gras au survol */
+}
+
+.dropdown-menu .dropdown-item:hover {
+    font-weight: bold; /* Changer en gras au survol */
+}
+
+.navbar-nav .nav-link {
+    display: flex; /* Utiliser flexbox */
+    align-items: center; /* Aligner les éléments verticalement */
+}
+
+.navbar-nav .nav-link .download {
+    width: 20px; /* Ajustez la largeur selon vos besoins */
+    height: auto; /* Permet de conserver le ratio hauteur/largeur */
+    margin-left: 5px; /* Ajustez la marge à gauche selon vos besoins */
+}
+
+
+
+
+
+
+.dr_fr{
+    width: 15%; /* Définissez la taille souhaitée */
+    height: auto; /* Cela permet de conserver les proportions originales de l'image */
+    margin-right: 5px;
+	margin-bottom: 4px;
+}
+
+.dr_uk{
+    width: 15%; /* Définissez la taille souhaitée */
+    height: auto; /* Cela permet de conserver les proportions originales de l'image */
+    margin-right: 5px;
+	margin-bottom: 4px;
+}
+
+.dropdown-menu .dropdown-item {
+	background-color: transparent !important; /* Annuler la couleur de fond */
+	color: #433633;
+    font-family: 'Forum', sans-serif; /* Appliquer la police "Forum" au texte du menu déroulant */
+}
+
+.dropdown-menu .dropdown-item:hover {
+    font-weight: bold; /* Changer en gras au survol */
+}
+
+
+.titre {
+	text-align: center;
+	margin-top: 4%;
+}
+
+
+.titre h1 {
+	color : #433633;
+    display: inline-block; /* Permet d'ajouter le trait en ligne avec le titre */
+    position: relative; /* Définir la position relative pour positionner le trait */
+	font-family: 'Platypi';
+}
+
+.titre h1::after {
+    content: ''; /* Obligatoire pour les pseudo-éléments */
+    position: absolute; /* Position absolue pour le positionnement précis */
+    bottom: -120%; /* Position en dessous du texte */
+    left: 50%; /* Position au centre de l'élément parent */
+    transform: translateX(-50%); /* Déplacer le trait horizontalement pour le centrer */
+    width: 1000px; /* Largeur du trait */
+    height: 0; /* Hauteur du trait, réglée sur 0 pour un trait sans espace vertical */
+    border-bottom: 1px solid #433633;
+}
+
+
+
+
+
+
+@keyframes moveLeftToRight {
+  0% { margin-left: 26%; }
+  50% { margin-left: 33%; }
+  100% { margin-left: 26%; }
+  animation-timing-function: ease; /* Ajouter une fonction d'accélération (ease) */
+}
+
+@keyframes moveRightToLeft {
+  0% { margin-right: 26%; }
+  50% { margin-right: 33%; }
+  100% { margin-right: 26%; }
+  animation-timing-function: ease; /* Ajouter une fonction d'accélération (ease) */
+}
+
+
+
+.contact1 {
+  width: 8%;
+  height: auto;
+  margin-top: -5%;
+  float: left; /* Placer l'élément à gauche */
+  animation: moveLeftToRight 5s infinite alternate; /* Animation de gauche à droite */
+}
+
+.contact2 {
+  width: 8%;
+  height: auto;
+  margin-top: -5%;
+  float: right; /* Placer l'élément à droite */
+  transform: scaleX(-1); /* Inversion horizontale de l'image */
+  animation: moveRightToLeft 5s infinite alternate; /* Animation de droite à gauche */
+}
+
+
+
+
+
+.container {
+    width: 800px; /* Ajuste la largeur en fonction du contenu */
+	height : 500px;
+    margin: 0 auto; /* Marge entre les blocs */
+    padding: 20px;
+    background-color: #D3B094; /* Couleur de fond pour block1 */
+    border: 1px solid #433633; /* Bordure */
+    border-radius: 15px;
+    color: #433633;
+    font-family: 'The Seasons', sans-serif;
+    display: flex; /* Utilisation de Flexbox pour aligner verticalement le contenu */
+    align-items: center; /* Alignement vertical */
+    margin-top: 6%; /* Espacement par rapport à la barre de menu */
+    justify-content: center; /* Centre les éléments horizontalement */
+    text-align: center; /* Centre le texte horizontalement */
+    overflow: hidden; /* Empêche le contenu de déborder */
+    flex-wrap: wrap; /* Permet aux éléments enfants de se mettre sur plusieurs lignes si nécessaire */
+}
+
+
+.sujet {
+	width: 700px;
+	background-color: #F6F2EF!important;
+	border-radius: 15px!important;
+}
+
+
+.message textarea {
+    height: 200px!important; /* Hauteur initiale */
+    resize: vertical!important; /* Autoriser le redimensionnement vertical */
+}
+
+.btn-success {
+	margin-top: 10px!important;
+}
+
+
+
+/* Couleur de la bordure verte lorsque le champ est en focus */
+.form-control:focus {
+    border-color: #687A61!important; /* Vert */
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25) !important; /* Effet d'ombre */
+}
+
+
+/* Couleur de fond du bouton "Envoyer" */
+.btn-success {
+    background-color: #687A61; /* Couleur de fond */
+    border-color: #687A61; /* Couleur de la bordure */
+}
+
+/* Couleur du bouton "Envoyer" au survol */
+.btn-success:hover {
+    background-color: #859C7A; /* Couleur de fond au survol */
+    border: 1px solid #433633; /* Bordure */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.diagramme {
+    width: 2.5%; /* Définissez la largeur souhaitée */
+    position: fixed; /* Utilisez 'fixed' pour que l'élément reste en place même lorsque vous faites défiler la page */
+    bottom: 25px; /* Positionne l'élément à 5px du bas de l'écran */
+    right: 25px; /* Positionne l'élément à 5px de la droite de l'écran */
+    margin-bottom: 0; /* Assurez-vous qu'il n'y a pas de marge en bas */
+    margin-right: 0; /* Assurez-vous qu'il n'y a pas de marge à droite */
+}
+
+
+
+
+
+
+/* Styles pour les téléphones */
+@media only screen and (max-width: 600px) {
+
+    /* Centrer le titre */
+    .titre {
+        margin-top: 40px;
+    }
+	
+	.titre h1 {
+		color : #433633;
+		display: inline-block; /* Permet d'ajouter le trait en ligne avec le titre */
+		position: relative; /* Définir la position relative pour positionner le trait */
+		font-family: 'Platypi';
+	}
+
+	.titre h1::after {
+		content: ''; /* Obligatoire pour les pseudo-éléments */
+		position: absolute; /* Position absolue pour le positionnement précis */
+		bottom: -120%; /* Position en dessous du texte */
+		left: 50%; /* Position au centre de l'élément parent */
+		transform: translateX(-50%); /* Déplacer le trait horizontalement pour le centrer */
+		width: 500px; /* Largeur du trait */
+		height: 0; /* Hauteur du trait, réglée sur 0 pour un trait sans espace vertical */
+		border-bottom: 1px solid #433633;
+	}
+
+
+	@keyframes moveLeftToRight {
+	  0% { margin-left: 10%; }
+	  50% { margin-left: 15%; }
+	  100% { margin-left: 10%; }
+	  animation-timing-function: ease; /* Ajouter une fonction d'accélération (ease) */
+	}
+
+	@keyframes moveRightToLeft {
+	  0% { margin-right: 10%; }
+	  50% { margin-right: 15%; }
+	  100% { margin-right: 10%; }
+	  animation-timing-function: ease; /* Ajouter une fonction d'accélération (ease) */
+	}
+
+
+	.contact1 {
+	  width: 15%;
+	  height: auto;
+	  margin-top: -10%;
+	  float: left; /* Placer l'élément à gauche */
+	  animation: moveLeftToRight 5s infinite alternate; /* Animation de gauche à droite */
+	}
+
+	.contact2 {
+	  width: 15%;
+	  height: auto;
+	  margin-top: -10%;
+	  float: right; /* Placer l'élément à droite */
+	  transform: scaleX(-1); /* Inversion horizontale de l'image */
+	  animation: moveRightToLeft 5s infinite alternate; /* Animation de droite à gauche */
+	}
+
+	
+    /* Présentation */
+	.fleur1,
+	.fleur2{
+        display: none;
+    }
+
+    /* Styles des blocs */
+    .container {
+		width: 500px; /* Ajuste la largeur en fonction du contenu */
+		height : 500px;
+		margin: 0 auto; /* Marge entre les blocs */
+		padding: 20px;
+		background-color: #D3B094; /* Couleur de fond pour block1 */
+		border: 1px solid #433633; /* Bordure */
+		border-radius: 15px;
+		color: #433633;
+		font-family: 'The Seasons', sans-serif;
+		display: flex; /* Utilisation de Flexbox pour aligner verticalement le contenu */
+		align-items: center; /* Alignement vertical */
+		margin-top: 15%; /* Espacement par rapport à la barre de menu */
+		justify-content: center; /* Centre les éléments horizontalement */
+		text-align: center; /* Centre le texte horizontalement */
+		overflow: hidden; /* Empêche le contenu de déborder */
+		flex-wrap: wrap; /* Permet aux éléments enfants de se mettre sur plusieurs lignes si nécessaire */
+	}
+
+
+	.sujet {
+		width: 460px;
+		background-color: #F6F2EF!important;
+		border-radius: 15px!important;
+	}
+
+
+	.message textarea {
+		height: 200px!important; /* Hauteur initiale */
+		resize: vertical!important; /* Autoriser le redimensionnement vertical */
+	}
+	
+	
+	.diagramme {
+		width: 5%; /* Définissez la largeur souhaitée */
+		position: fixed; /* Utilisez 'fixed' pour que l'élément reste en place même lorsque vous faites défiler la page */
+		bottom: 25px; /* Positionne l'élément à 5px du bas de l'écran */
+		right: 25px; /* Positionne l'élément à 5px de la droite de l'écran */
+		margin-bottom: 0; /* Assurez-vous qu'il n'y a pas de marge en bas */
+		margin-right: 0; /* Assurez-vous qu'il n'y a pas de marge à droite */
+	}
+	
+}

@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Platypi&display=swap');
+
+@font-face {
+    font-family: 'The Seasons';
+    src: url('TheSeasons.woff2') format('woff2');
+    /* Ajoutez d'autres formats de police si nécessaire */
+}
+
+
+body {
+    background-image: url('fond.gif');
+    background-size: auto;
+    background-position: center;
+    height: 100vh; /* Hauteur égale à 100% de la hauteur de la fenêtre */
+    margin: 0; /* Supprimer la marge par défaut */
+    padding: 0; /* Supprimer le rembourrage par défaut */
+}
+
+.navbar {
+    background-color: #F6F2EF!important;
+    border: 1px solid grey;
+    z-index: 1;
+    position: relative; /* Retirez position: fixed; et ajoutez position: relative; */
+}
+
+
+.navbar-nav {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 30px; /* Espacement entre les éléments de la navbar */
+}
+
+.navbar-nav .nav-link {
+    font-family: 'Forum', sans-serif; /* Appliquer la police "Forum" au texte de la navbar */
+    text-decoration: none; /* Supprimer le soulignement par défaut */
+	font-size : 16px;
+}
+
+.navbar-nav .nav-link:hover {
+    font-weight: bold; /* Changer en gras au survol */
+}
+
+.dropdown-menu .dropdown-item:hover {
+    font-weight: bold; /* Changer en gras au survol */
+}
+
+.navbar-nav .nav-link {
+    display: flex; /* Utiliser flexbox */
+    align-items: center; /* Aligner les éléments verticalement */
+}
+
+.navbar-nav .nav-link .download {
+    width: 20px; /* Ajustez la largeur selon vos besoins */
+    height: auto; /* Permet de conserver le ratio hauteur/largeur */
+    margin-left: 5px; /* Ajustez la marge à gauche selon vos besoins */
+}
+
+
+.dr_fr{
+    width: 15%; /* Définissez la taille souhaitée */
+    height: auto; /* Cela permet de conserver les proportions originales de l'image */
+    margin-right: 5px;
+	margin-bottom: 4px;
+}
+
+.dr_uk{
+    width: 15%; /* Définissez la taille souhaitée */
+    height: auto; /* Cela permet de conserver les proportions originales de l'image */
+    margin-right: 5px;
+	margin-bottom: 4px;
+}
+
+.dropdown-menu .dropdown-item {
+	background-color: transparent !important; /* Annuler la couleur de fond */
+	color: #433633;
+    font-family: 'Forum', sans-serif; /* Appliquer la police "Forum" au texte du menu déroulant */
+}
+
+.dropdown-menu .dropdown-item:hover {
+    font-weight: bold; /* Changer en gras au survol */
+}
+
+
+
+
+
+
+
+
+/* Style de l'élément "Accueil" : */
+.accueil {
+	width: 25%;
+    position: absolute; /* Position absolue par rapport au body */
+    top: 50%; /* Alignement vertical au milieu */
+    left: 50%; /* Alignement horizontal au milieu */
+    transform: translate(-50%, -50%); /* Déplace l'élément de moitié de sa propre largeur et hauteur vers le haut et la gauche */
+}
+
+
+
+
+
+
+
+
+
+.nom {
+    text-align: center;
+    margin-top: -225px; /* Ajustez la marge pour compenser le déplacement vers le haut */
+    font-family: 'Platypi';
+    color : #5C5552;
+    font-size: 40px;
+    position: absolute;
+    left: 50%;
+    top: calc(50% - 40px); /* Centrage vertical moins 40px */
+    transform: translate(-50%, -50%);
+}
+
+
+.nom p {
+	margin-top: 10px; /* Ajustez la valeur selon vos besoins */
+    line-height: 1.2; /* Ajustez la valeur selon vos besoins */
+}
+
+
+
+
+
+
+.copyright {
+    text-align: center;
+    margin-top: 225px; /* Ajustez la marge pour déplacer vers le bas */
+    font-family: 'Forum', sans-serif;
+    color : #5C5552;
+    position: absolute;
+    left: 50%;
+    top: calc(50% + 40px); /* Centrage vertical plus 40px */
+    transform: translate(-50%, -50%);
+}
+
+
+/* Taille de police différente pour la première ligne */
+.copyright p:nth-of-type(1) {
+    font-size: 24.3px; /* Ajustez la taille de police selon vos besoins */
+}
+
+/* Taille de police différente pour la deuxième ligne */
+ .copyright p:nth-of-type(2) {
+    font-size: 18px; /* Ajustez la taille de police selon vos besoins */
+}
+
+/* Réduire l'espacement entre les deux paragraphes */
+.copyright p {
+    margin-bottom: 10px; /* Ajustez la valeur selon vos besoins */
+    line-height: 0.7; /* Définir un interligne de 0.7 */
+}
+
+
+
+
+
+.diagramme {
+    width: 2.5%; /* Définissez la largeur souhaitée */
+    position: fixed; /* Utilisez 'fixed' pour que l'élément reste en place même lorsque vous faites défiler la page */
+    bottom: 25px; /* Positionne l'élément à 5px du bas de l'écran */
+    right: 25px; /* Positionne l'élément à 5px de la droite de l'écran */
+    margin-bottom: 0; /* Assurez-vous qu'il n'y a pas de marge en bas */
+    margin-right: 0; /* Assurez-vous qu'il n'y a pas de marge à droite */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+	.accueil {
+		width: 75%;
+	}
+
+	.nom {
+		text-align: center;
+		margin-top: -210px; /* Ajustez la marge pour compenser le déplacement vers le haut */
+		font-family: 'Platypi';
+		color : #5C5552;
+		font-size: 40px;
+		position: absolute;
+		left: 50%;
+		top: calc(50% - 40px); /* Centrage vertical moins 40px */
+		transform: translate(-50%, -50%);
+	}
+
+
+	.nom p {
+		margin-top: 10px; /* Ajustez la valeur selon vos besoins */
+		line-height: 1.2; /* Ajustez la valeur selon vos besoins */
+	}
+
+
+	.copyright {
+		text-align: center;
+		margin-top: 200px; /* Ajustez la marge pour déplacer vers le bas */
+		font-family: 'Forum', sans-serif;
+		color : #5C5552;
+		position: absolute;
+		left: 50%;
+		top: calc(50% + 40px); /* Centrage vertical plus 40px */
+		transform: translate(-50%, -50%);
+	}
+
+
+	/* Taille de police différente pour la première ligne */
+	.copyright p:nth-of-type(1) {
+		font-size: 24.3px; /* Ajustez la taille de police selon vos besoins */
+	}
+
+	/* Taille de police différente pour la deuxième ligne */
+	 .copyright p:nth-of-type(2) {
+		font-size: 18px; /* Ajustez la taille de police selon vos besoins */
+	}
+
+	/* Réduire l'espacement entre les deux paragraphes */
+	.copyright p {
+		margin-bottom: 10px; /* Ajustez la valeur selon vos besoins */
+		line-height: 0.7; /* Définir un interligne de 0.7 */
+	}
+
+
+
+	.diagramme {
+		width: 5%; /* Définissez la largeur souhaitée */
+		position: fixed; /* Utilisez 'fixed' pour que l'élément reste en place même lorsque vous faites défiler la page */
+		bottom: 25px; /* Positionne l'élément à 5px du bas de l'écran */
+		right: 25px; /* Positionne l'élément à 5px de la droite de l'écran */
+		margin-bottom: 0; /* Assurez-vous qu'il n'y a pas de marge en bas */
+		margin-right: 0; /* Assurez-vous qu'il n'y a pas de marge à droite */
+	}
+}

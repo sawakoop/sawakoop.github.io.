@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Platypi&display=swap');
+
+@font-face {
+    font-family: 'The Seasons';
+    src: url('TheSeasons.woff2') format('woff2');
+    /* Ajoutez d'autres formats de police si nécessaire */
+}
+
+
+body {
+    background-image: url('fond.gif');
+    background-size: auto;
+    background-position: center;
+    height: 100vh; /* Hauteur égale à 100% de la hauteur de la fenêtre */
+    margin: 0; /* Supprimer la marge par défaut */
+    padding: 0; /* Supprimer le rembourrage par défaut */
+}
+
+.navbar{
+	background-color : #F6F2EF!important;
+	border: 1px solid grey;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.navbar-nav .nav-item {
+    margin-right: 30px; /* Espacement entre les éléments de la navbar */
+}
+
+.navbar-nav .nav-link {
+    font-family: 'Forum', sans-serif; /* Appliquer la police "Forum" au texte de la navbar */
+    text-decoration: none; /* Supprimer le soulignement par défaut */
+	font-size : 16px;
+}
+
+.navbar-nav .nav-link:hover {
+    font-weight: bold; /* Changer en gras au survol */
+}
+
+.dropdown-menu .dropdown-item:hover {
+    font-weight: bold; /* Changer en gras au survol */
+}
+
+
+
+.navbar-nav .nav-link {
+    display: flex; /* Utiliser flexbox */
+    align-items: center; /* Aligner les éléments verticalement */
+}
+
+.navbar-nav .nav-link .download {
+    width: 20px; /* Ajustez la largeur selon vos besoins */
+    height: auto; /* Permet de conserver le ratio hauteur/largeur */
+    margin-left: 5px; /* Ajustez la marge à gauche selon vos besoins */
+}
+
+
+
+
+.dr_fr{
+    width: 15%; /* Définissez la taille souhaitée */
+    height: auto; /* Cela permet de conserver les proportions originales de l'image */
+    margin-right: 5px;
+	margin-bottom: 4px;
+}
+
+.dr_uk{
+    width: 15%; /* Définissez la taille souhaitée */
+    height: auto; /* Cela permet de conserver les proportions originales de l'image */
+    margin-right: 5px;
+	margin-bottom: 4px;
+}
+
+.dropdown-menu .dropdown-item {
+	background-color: transparent !important; /* Annuler la couleur de fond */
+	color: #433633;
+    font-family: 'Forum', sans-serif; /* Appliquer la police "Forum" au texte du menu déroulant */
+}
+
+.dropdown-menu .dropdown-item:hover {
+    font-weight: bold; /* Changer en gras au survol */
+}
+
+
+.titre {
+	text-align: center;
+	margin-top: 4%;
+}
+
+
+.titre h1 {
+	color : #433633;
+    display: inline-block; /* Permet d'ajouter le trait en ligne avec le titre */
+    position: relative; /* Définir la position relative pour positionner le trait */
+	font-family: 'Platypi';
+}
+
+.titre h1::after {
+    content: ''; /* Obligatoire pour les pseudo-éléments */
+    position: absolute; /* Position absolue pour le positionnement précis */
+    bottom: -120%; /* Position en dessous du texte */
+    left: 50%; /* Position au centre de l'élément parent */
+    transform: translateX(-50%); /* Déplacer le trait horizontalement pour le centrer */
+    width: 1000px; /* Largeur du trait */
+    height: 0; /* Hauteur du trait, réglée sur 0 pour un trait sans espace vertical */
+    border-bottom: 1px solid #433633;
+}
+
+
+
+
+
+@keyframes moveLeftToRight {
+  0% { margin-left: 25%; }
+  50% { margin-left: 33%; }
+  100% { margin-left: 25%; }
+  animation-timing-function: ease; /* Ajouter une fonction d'accélération (ease) */
+}
+
+@keyframes moveRightToLeft {
+  0% { margin-right: 25%; }
+  50% { margin-right: 33%; }
+  100% { margin-right: 25%; }
+  animation-timing-function: ease; /* Ajouter une fonction d'accélération (ease) */
+}
+
+
+.parcours1 {
+  width: 8%;
+  height: auto;
+  margin-top: -5%;
+  float: left; /* Placer l'élément à gauche */
+  animation: moveLeftToRight 5s infinite alternate; /* Animation de gauche à droite */
+}
+
+.parcours2 {
+  width: 8%;
+  height: auto;
+  margin-top: -5%;
+  float: right; /* Placer l'élément à droite */
+  transform: scaleX(-1); /* Inversion horizontale de l'image */
+  animation: moveRightToLeft 5s infinite alternate; /* Animation de droite à gauche */
+}
+
+
+
+
+
+
+/* Ajout de styles pour la div parente */
+.container {
+    text-align: center; /* Centre les enfants horizontalement */
+    margin-top: 8%; /* Espacement par rapport à la barre de menu */
+    display: flex; /* Utilisation de Flexbox */
+    justify-content: center; /* Centre les éléments horizontalement */
+}
+
+.block1 {
+    width: 30%; /* Largeur des blocs */
+    height: 300px;
+    padding: 20px;
+    background-color: #687A61; /* Couleur de fond pour block1 */
+    border: 1px solid #433633; /* Bordure */
+    border-radius: 15px;
+    margin: 0 150px; /* Marge entre les blocs */
+    color: white;
+    font-family: 'The Seasons', sans-serif;
+    display: flex; /* Utilisation de Flexbox pour aligner le contenu */
+    flex-direction: column; /* Alignement vertical des éléments */
+    align-items: center; /* Alignement horizontal */
+    text-align: center; /* Centre le texte horizontalement */
+    overflow: hidden; /* Empêche le contenu de déborder */
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.block1 h5,
+.block1 p {
+    margin: 0;
+    align-self: center; /* Centre le contenu verticalement */
+}
+
+
+.block2 {
+    width: 30%; /* Largeur des blocs */
+    height: 300px;
+    padding: 20px;
+    background-color: #D3B094; /* Couleur de fond pour block1 */
+    border: 1px solid #433633; /* Bordure */
+    border-radius: 15px;
+    margin: 0 150px; /* Marge entre les blocs */
+    color: white;
+    font-family: 'The Seasons', sans-serif;
+    display: flex; /* Utilisation de Flexbox pour aligner le contenu */
+    flex-direction: column; /* Alignement vertical des éléments */
+    align-items: center; /* Alignement horizontal */
+    text-align: center; /* Centre le texte horizontalement */
+    overflow: hidden; /* Empêche le contenu de déborder */
+    display: flex;
+    justify-content: center;
+}
+
+.block2 h5,
+.block2 p {
+    margin: 0;
+    align-self: center; /* Centre le contenu verticalement */
+}
+
+.block1 {
+    transition: background-color 0.3s ease; /* Ajout de la transition avec un fondu de 0.3 seconde */
+}
+
+.block1:hover {
+    cursor: pointer; /* Changement de curseur au survol */
+    background-color: #859C7A; /* Nouvelle couleur de fond au survol */
+}
+
+
+.block2 {
+    transition: background-color 0.3s ease; /* Ajout de la transition avec un fondu de 0.3 seconde */
+}
+
+.block2:hover {
+    cursor: pointer; /* Changement de curseur au survol */
+	background-color: #DFC5A6; /* Nouvelle couleur de fond au survol */
+}
+
+
+.container {
+    position: relative; /* Définir la position relative pour permettre le positionnement absolu de l'élément hr */
+}
+
+
+.long-trait {
+    position: absolute;
+    bottom: -35%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    margin: 0;
+    border: none;
+    border-top: 2px dotted #433633; /* Utilisation de border-top pour créer une ligne en pointillés */
+    z-index: 1; /* Augmentez le z-index pour placer le trait en dessous des cercles */
+}
+
+
+
+
+
+.cercle1 {
+    width: 30px; /* Définissez la largeur */
+    height: 30px; /* Définissez la hauteur */
+    border-radius: 50%; /* Cela rendra le conteneur circulaire */
+    background-color: #687A61; /* Couleur de fond verte */
+	margin : 89px 0 0 620px;
+	position: relative; /* Ajoutez une position relative pour pouvoir contrôler le z-index */
+    z-index: 2; /* Augmentez le z-index pour placer les cercles au-dessus du trait */
+}
+
+
+.cercle2 {
+    width: 30px; /* Définissez la largeur */
+    height: 30px; /* Définissez la hauteur */
+    border-radius: 50%; /* Cela rendra le conteneur circulaire */
+    background-color: #D3B094; /* Couleur de fond verte */
+	margin : -30px 0 0 1270px;
+	position: relative; /* Ajoutez une position relative pour pouvoir contrôler le z-index */
+    z-index: 2; /* Augmentez le z-index pour placer les cercles au-dessus du trait */
+}
+
+
+
+
+
+
+
+.metro {
+    height: 30px;
+    margin-top: -90px;
+	transform: scaleX(-1); /* Inversion horizontale de l'image */
+    animation: deplacementMetro 15s ease infinite; /* Animation pour déplacer l'élément avec répétition infinie */
+    margin-left: 0; /* Position de départ */
+}
+
+
+
+
+@keyframes deplacementMetro {
+    0% {
+        margin-left: 640px; /* Début de l'animation */
+		opacity: 0%;
+    }
+	5% {
+		opacity: 100%;
+    }
+	95% {
+		opacity: 100%;
+    }
+    100% {
+        margin-left: 1100px; /* Fin de l'animation */
+		opacity: 0%;
+    }
+}
+
+
+.diagramme {
+    width: 2.5%; /* Définissez la largeur souhaitée */
+    position: fixed; /* Utilisez 'fixed' pour que l'élément reste en place même lorsque vous faites défiler la page */
+    bottom: 25px; /* Positionne l'élément à 5px du bas de l'écran */
+    right: 25px; /* Positionne l'élément à 5px de la droite de l'écran */
+    margin-bottom: 0; /* Assurez-vous qu'il n'y a pas de marge en bas */
+    margin-right: 0; /* Assurez-vous qu'il n'y a pas de marge à droite */
+}
+
+
+
+/* Styles pour les téléphones */
+@media only screen and (max-width: 600px) {
+
+    /* Centrer le titre */
+    .titre {
+        margin-top: 40px;
+    }
+	
+	.titre h1 {
+		color : #433633;
+		display: inline-block; /* Permet d'ajouter le trait en ligne avec le titre */
+		position: relative; /* Définir la position relative pour positionner le trait */
+		font-family: 'Platypi';
+	}
+
+	.titre h1::after {
+		content: ''; /* Obligatoire pour les pseudo-éléments */
+		position: absolute; /* Position absolue pour le positionnement précis */
+		bottom: -120%; /* Position en dessous du texte */
+		left: 50%; /* Position au centre de l'élément parent */
+		transform: translateX(-50%); /* Déplacer le trait horizontalement pour le centrer */
+		width: 500px; /* Largeur du trait */
+		height: 0; /* Hauteur du trait, réglée sur 0 pour un trait sans espace vertical */
+		border-bottom: 1px solid #433633;
+	}
+
+
+	@keyframes moveLeftToRight {
+	  0% { margin-left: 10%; }
+	  50% { margin-left: 14%; }
+	  100% { margin-left: 10%; }
+	  animation-timing-function: ease; /* Ajouter une fonction d'accélération (ease) */
+	}
+
+	@keyframes moveRightToLeft {
+	  0% { margin-right: 10%; }
+	  50% { margin-right: 14%; }
+	  100% { margin-right: 10%; }
+	  animation-timing-function: ease; /* Ajouter une fonction d'accélération (ease) */
+	}
+
+
+	.parcours1 {
+	  width: 15%;
+	  height: auto;
+	  margin-top: -10%;
+	  float: left; /* Placer l'élément à gauche */
+	  animation: moveLeftToRight 5s infinite alternate; /* Animation de gauche à droite */
+	}
+
+	.parcours2 {
+	  width: 15%;
+	  height: auto;
+	  margin-top: -10%;
+	  float: right; /* Placer l'élément à droite */
+	  transform: scaleX(-1); /* Inversion horizontale de l'image */
+	  animation: moveRightToLeft 5s infinite alternate; /* Animation de droite à gauche */
+	}
+
+	
+    /* Présentation */
+	.fleur1,
+	.fleur2,
+	.long-trait,
+	.cercle1,
+	.cercle2,
+	.metro{
+        display: none;
+    }
+
+    /* Styles des blocs */
+    .container {
+		text-align: center; /* Centre les enfants horizontalement */
+		margin-top: 12%; /* Espacement par rapport à la barre de menu */
+		display: block; /* Afficher les blocs comme des éléments de bloc */
+	}
+
+	.block1 {
+		width: 80%; /* Largeur des blocs */
+		height: 275px;
+		padding: 20px;
+		background-color: #687A61; /* Couleur de fond pour block1 */
+		border: 1px solid #433633; /* Bordure */
+		color: white;
+		font-family: 'The Seasons', sans-serif;
+		margin: 30px auto; /* Marge autour des blocs */
+		box-sizing: border-box; /* Inclure le padding et la bordure dans la hauteur et la largeur */
+	}
+
+	.block1 h5,
+	.block1 p {
+		margin: 0;
+		align-self: center; /* Centre le contenu verticalement */
+	}
+
+
+	.block2 {
+		width: 80%; /* Largeur des blocs */
+		height: 275px;
+		padding: 20px;
+		background-color: #D3B094; /* Couleur de fond pour block1 */
+		border: 1px solid #433633; /* Bordure */
+		border-radius: 15px;
+		color: white;
+		font-family: 'The Seasons', sans-serif;
+		margin: 30px auto; /* Marge autour des blocs */
+		box-sizing: border-box; /* Inclure le padding et la bordure dans la hauteur et la largeur */
+	}
+
+	.block2 h5,
+	.block2 p {
+		margin: 0;
+		align-self: center; /* Centre le contenu verticalement */
+	}
+	
+	.diagramme {
+		width: 5%; /* Définissez la largeur souhaitée */
+		position: fixed; /* Utilisez 'fixed' pour que l'élément reste en place même lorsque vous faites défiler la page */
+		bottom: 25px; /* Positionne l'élément à 5px du bas de l'écran */
+		right: 25px; /* Positionne l'élément à 5px de la droite de l'écran */
+		margin-bottom: 0; /* Assurez-vous qu'il n'y a pas de marge en bas */
+		margin-right: 0; /* Assurez-vous qu'il n'y a pas de marge à droite */
+	}
+	
+}
